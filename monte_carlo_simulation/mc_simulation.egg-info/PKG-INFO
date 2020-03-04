@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mc-simulation
+Version: 0.0.3
+Summary: A package for monte carlo simulations for time series
+Home-page: https://github.com/Carlo-Parodi/monte_carlo_simulation
+Author: Carlo Parodi
+Author-email: carlo.parodi91@gmail.com
+License: UNKNOWN
+Description: # mc_simulation
+        This library allows you to run Monte Carlo simulations on time series
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free To Use But Restricted
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
