@@ -43,10 +43,8 @@ class DataCleaner():
              self.data_preprocessed = pd.read_csv(self.link)
         elif file_type == 'xls':
             self.data_preprocessed = pd.read_excel(self.link)
-        
-        
+            
         self.new_columns = list(self.data_preprocessed.columns)
-        self.y = np.zeros(len(self.data_preprocessed))
         self.y = np.zeros(len(self.data_preprocessed))
         
         for i in range (0, len(self.data_preprocessed)):
