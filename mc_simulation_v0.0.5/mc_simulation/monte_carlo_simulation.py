@@ -44,10 +44,9 @@ class DataCleaner():
         elif file_type == 'xls':
             self.data_preprocessed = pd.read_excel(self.link)
         
-        self.new_columns = list(self.data_preprocessed.iloc[0])
         
-        self.data_preprocessed.columns = self.new_columns
-        self.data_preprocessed = self.data_preprocessed.drop([0])
+        self.new_columns = list(self.data_preprocessed.columns)
+        self.y = np.zeros(len(self.data_preprocessed))
         self.y = np.zeros(len(self.data_preprocessed))
         
         for i in range (0, len(self.data_preprocessed)):
@@ -94,7 +93,7 @@ class AverageModel:
         data1 = ret.iloc[:,0].values
         adf_result = self.__adf_test(data1)
         if adf_result[0]>-3.44:
-            raise UnitRootError('ADF test statistic value: ' + str(adftest_result[0]) + 
+            return ('ADF test statistic value: ' + str(adf_result[0]) + 
                          ', critical value: -3.44 circa\n cannot proceed with the evaluation of any model')
         else:
             self.__models_estim()
